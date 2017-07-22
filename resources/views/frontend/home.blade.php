@@ -153,7 +153,7 @@
                         <div class="single-product-hover-text">
                             <h2><a href="#">{{ $catalogue->title }}</a></h2>
                             <ul class="cart-metalic">
-                                <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
+                                <li><a href="/catalogos/{{ $catalogue->id }}/categorias/" class="add-to-cart">Ver >></a></li>
                             </ul>
                         </div>
                     </div>

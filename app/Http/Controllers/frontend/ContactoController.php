@@ -5,7 +5,7 @@ namespace App\Http\Controllers\frontend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ProductFrontController extends Controller
+class ContactoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ProductFrontController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.contacto');
     }
 
     /**

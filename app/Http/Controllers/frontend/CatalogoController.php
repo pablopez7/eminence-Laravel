@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Catalogue;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -26,10 +27,11 @@ class CatalogoController extends Controller
         return view('layouts.eminence', ['catalogues' => $catalogues]);
     }
 
-    public function products(){
+    public function catalogos(Category $category){
         $catalogues = Catalogue::all();
+        $categories = Category::all();
 
-        return view('frontend.productos', ['catalogues' => $catalogues]);
+        return view('frontend.catalogos', ['catalogues' => $catalogues, 'categories' => $categories]);
     }
 
     /**

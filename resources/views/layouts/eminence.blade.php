@@ -98,9 +98,9 @@
                                     <ul id="nav">
                                         <li><a href="#">productos</a>
                                             <ul class="submenu-mainmenu">
-                                                <li><a href="productos">All Products</a></li>
+                                                <li><a href="/catalogos">Nuestro Catálogo</a></li>
                                                 @forelse($catalogues as $catalogue)
-                                                <li><a href="face">{{$catalogue->title}}</a></li>
+                                                <li><a href="/catalogos/{{ $catalogue->id }}/categorias/">{{$catalogue->title}}</a></li>
                                                 @empty
                                                     <li><a href="starterSets">Sin productos</a></li>
                                                 @endforelse
@@ -109,7 +109,7 @@
                                         <li><a href="clients">Clientes</a></li>
                                         <li><a href="#">Extras</a>
                                             <ul class="submenu-mainmenu">
-                                                <li><a href="green-company">Empresa Verde</a></li>
+                                                <li><a href="/empresaVerde">Empresa Verde</a></li>
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                                 <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
@@ -117,7 +117,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="https://www.latiendadesuperfoods.com" target="_blank">Tienda</a></li>
-                                        <li><a href="contact">Contacto</a></li>
+                                        <li><a href="/contacto">Contacto</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -136,24 +136,25 @@
                             <nav id="dropdown">
                                 <ul>
                                     <li><a href="#">productos</a>
-                                        <ul>
-                                            <li><a href="products">All Products</a></li>
-                                            <li><a href="./face.php">Face</a></li>
-                                            <li><a href="./body.php">Body</a></li>
-                                            <li><a href="./cosmetics.php">Cosmetics</a></li>
-                                            <li><a href="./starterSets.php">Starter Sets & Specialty Items</a></li>
+                                        <ul class="submenu-mainmenu">
+                                            <li><a href="/catalogos">Nuestro Catálogo</a></li>
+                                            @forelse($catalogues as $catalogue)
+                                                <li><a href="/catalogos/{{ $catalogue->id }}/categorias/">{{$catalogue->title}}</a></li>
+                                            @empty
+                                                <li><a href="starterSets">Sin productos</a></li>
+                                            @endforelse
                                         </ul>
                                     </li>
                                     <li><a href="clients">Nuestros Clientes</a></li>
                                     <li><a href="#">Extras</a>
                                         <ul>
-                                            <li><a href="green-company">Empresa Verde</a></li>
+                                            <li><a href="/empresaVerde">Empresa Verde</a></li>
                                             <li role="separator" class="divider"></li>
                                             <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                             <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact">Contacto</a></li>
+                                    <li><a href="/contacto">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -206,11 +207,11 @@
                             <h5>links</h5>
                             <ul>
                                 <li><a href="clients">Nuestros Clientes</a></li>
-                                <li><a href="green-company">Empresa Verde</a></li>
+                                <li><a href="/empresaVerde">Empresa Verde</a></li>
                                 <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                 <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
                                 <li><a href="https://www.latiendadesuperfoods.com" target="_blank">Tienda</a></li>
-                                <li><a href="contact">Contacto</a></li>
+                                <li><a href="/contacto">Contacto</a></li>
                             </ul>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
     <div class="extend"></div>
     <div class="col-xs-12">
         <div class="section-title">
-            <h2>{{$category_title}}</h2>
+            <h2>{{$catalogue_title}}</h2>
         </div>
     </div>
     <!-- shop grid start -->
@@ -54,18 +54,18 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
-                                        @forelse($products as $product)
+                                        @forelse($categories as $category)
                                             <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
-                                                        <a href="#"><img class="img-home" src="{{ url("images/products/$product->image") }}"
-                                                                         alt="{{ $product->title }}"></a>
+                                                        <a href="#"><img class="img-home" src="{{ url("images/categories/$category->image") }}"
+                                                                         alt="{{ $category->title }}"></a>
                                                     </div>
                                                     <div class="single-product-hover">
                                                         <div class="single-product-hover-text">
-                                                            <h4><a href="#">{{ $product->title }}</a></h4>
+                                                            <h4><a href="#">{{ $category->title }}</a></h4>
                                                             <ul class="cart-metalic">
-                                                                <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
+                                                                <li><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos" class="add-to-cart">Ver >></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -84,18 +84,18 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
-                                        @forelse($products as $product)
+                                        @forelse($categories as $category)
                                             <div class="shop-product-list col-md-12">
                                                 <div class="row">
                                                     <div class="col-lg-4 col-md-5 col-sm-5">
                                                         <div class="single-product">
                                                             <div class="single-product-img">
-                                                                <a href="#"><img class="img-home" src="{{ url("images/products/$product->image") }}"
-                                                                                 alt="{{ $product->title }}"></a>
+                                                                <a href="#"><img class="img-home" src="{{ url("images/categories/$category->image") }}"
+                                                                                 alt="{{ $category->title }}"></a>
                                                             </div>
                                                             <div class="single-product-hover">
                                                                 <div class="single-product-hover-text">
-                                                                    <h4><a href="#">{{ $product->title }}</a></h4>
+                                                                    <h4><a href="#">{{ $category->title }}</a></h4>
                                                                     <ul class="cart-metalic">
                                                                         <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
                                                                     </ul>
@@ -105,10 +105,10 @@
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7">
                                                         <div class="single-product-info">
-                                                            <h2>{{ $product->title }}</h2>
-                                                            <h5>{{ $product->description }}</h5>
+                                                            <h2>{{ $category->title }}</h2>
+                                                            <h5>{{ $category->description }}</h5>
                                                             <ul class="cart-metalic">
-                                                                <li><a href="#" class="add-to-cart">Ver >></a></li>
+                                                                <li><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos/" class="add-to-cart">Ver >></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>

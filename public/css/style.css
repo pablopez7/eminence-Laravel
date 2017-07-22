@@ -668,7 +668,7 @@ ul.submenu-mainmenu li span.sub-total-cart .view-cart:hover{
     margin-left:-74px;
     bottom: -35px;
     content:"";
-    background: url(/assets/img/icon/title.png);
+    background: url(/img/icon/title.png);
     width: 149px;
     height: 21px;
 }
@@ -1093,7 +1093,7 @@ ul.cart-metalic li a.add-to-cart:hover{
 /*  12. Shop grid left CSS
 /*----------------------------------------*/
 .banner-area{
-    background-image: url(img/banner/1.jpg);
+    background-image: url(/img/banner/1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1901,7 +1901,7 @@ ul.cart-metalic{
     width: 1px;
 }
 .dec.qtybutton, .inc.qtybutton {
-    background: url("/assets/img/icon/arrow-down.png") no-repeat scroll 0 0;
+    background: url("/img/icon/arrow-down.png") no-repeat scroll 0 0;
     cursor: pointer;
     font-size: 0;
     height: 20px;
@@ -1911,7 +1911,7 @@ ul.cart-metalic{
     width: 20px;
 }
 .inc.qtybutton {
-    background-image:url("/assets/img/icon/arrow-up.png");
+    background-image:url("/img/icon/arrow-up.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     top: 8px;
@@ -2109,7 +2109,7 @@ ul.cart-metalic{
     border-bottom: none;
 }
 .search-cat {
-    background: url("img/product/arrow_down.png") no-repeat scroll 91% 11px;
+    background: url("/img/product/arrow_down.png") no-repeat scroll 91% 11px;
     cursor: pointer;
     float: left;
     font-weight: 700;
@@ -2156,7 +2156,7 @@ ul.cart-metalic{
     right: 0;
     top: 45%;
     content:""; 
-    background: url(/assets/img/icon/arrow-down.png)no-repeat scroll 0 0;
+    background: url(/img/icon/arrow-down.png)no-repeat scroll 0 0;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -2437,7 +2437,7 @@ option {
     margin-bottom: 114px;
 }
 .contact-form {
-    background-image: url("img/banner/2.png");
+    background-image: url("/img/banner/2.png");
     background-position: center center;
     background-repeat: no-repeat;
     display: inline-block;
@@ -2851,7 +2851,7 @@ button[type=submit]{
 }
 .pp_quantity .category-items {
     -moz-appearance: none;
-    background: url(/assets/img/icon/arrow-down.png);
+    background: url(/img/icon/arrow-down.png);
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -3163,8 +3163,4 @@ td.product_des h3 a:hover{
             transform: scale(0);
     -webkit-transition: all 500ms ease 0s;
             transition: all 500ms ease 0s;
-}
-
-.extend {
-    padding: 6% 0 6% 0;
 }
