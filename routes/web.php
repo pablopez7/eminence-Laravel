@@ -12,18 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
+});
+
+Route::get('productos', function () {
+    return view('frontend.products');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/productos', 'frontend\CatalogoController@products')->name('productos');
 
 
 
-Route::resource('catalogues', "CatalogueController");
-Route::resource('catalogues.categories', "CategoryController");
-Route::resource('categories', "CategoryController");
-Route::resource('catalogues.categories.products', "ProductController");
-Route::resource('categories.products', "ProductController");
-Route::resource('products', "ProductController");
+Route::resource('/', "frontend\CatalogoController");
+Route::resource('layouts/eminence', "frontend\CatalogoController");
+Route::resource('frontend/productos', "frontend\CatalogoController");
+
+Route::group(['middleware' => 'auth'], function (){
+    Route::resource('catalogues', "CatalogueController");
+    Route::resource('catalogues.categories', "CategoryController");
+    Route::resource('categories', "CategoryController");
+    Route::resource('catalogues.categories.products', "ProductController");
+    Route::resource('categories.products', "ProductController");
+    Route::resource('products', "ProductController");
+});

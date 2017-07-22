@@ -101,114 +101,28 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
+                                    @forelse($catalogues as $catalogue)
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <div class="single-product">
                                             <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/2.jpg') }}" alt=""></a>
+                                                <a href="#"><img class="img-home" src="{{ url("images/catalogues/$catalogue->image") }}"
+                                                                 alt="{{ $catalogue->title }}"></a>
                                             </div>
                                             <div class="single-product-hover">
                                                 <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
+                                                    <h4><a href="#">{{ $catalogue->title }}</a></h4>
                                                     <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
+                                                        <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/3.jpg') }}" alt=""></a>
-                                            </div>
-                                            <div class="single-product-hover">
-                                                <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                    @empty
+                                        <div class="alert alert-danger">
+                                            <h3 class="text-center">Ups!! No existen catalogos, los estamos creando...</h3>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/4.jpg') }}" alt=""></a>
-                                            </div>
-                                            <div class="single-product-hover">
-                                                <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/6.jpg') }}" alt=""></a>
-                                            </div>
-                                            <div class="single-product-hover">
-                                                <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/7.jpg') }}" alt=""></a>
-                                            </div>
-                                            <div class="single-product-hover">
-                                                <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single-product">
-                                            <div class="single-product-img">
-                                                <a href="#"><img src="{{ url('img/product/8.jpg') }}" alt=""></a>
-                                            </div>
-                                            <div class="single-product-hover">
-                                                <div class="single-product-hover-text">
-                                                    <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                    <h2>$ 125.00</h2>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
@@ -217,21 +131,20 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
+                                    @forelse($catalogues as $catalogue)
                                     <div class="shop-product-list col-md-12">
                                         <div class="row">
                                             <div class="col-lg-4 col-md-5 col-sm-5">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/3.jpg') }}" alt=""></a>
+                                                        <a href="#"><img class="img-home" src="{{ url("images/catalogues/$catalogue->image") }}"
+                                                                         alt="{{ $catalogue->title }}"></a>
                                                     </div>
                                                     <div class="single-product-hover">
                                                         <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
+                                                            <h4><a href="#">{{ $catalogue->title }}</a></h4>
                                                             <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
+                                                                <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -239,200 +152,20 @@
                                             </div>
                                             <div class="col-lg-8 col-md-7 col-sm-7">
                                                 <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                    <h2>{{ $catalogue->title }}</h2>
+                                                    <h5>{{ $catalogue->description }}</h5>
                                                     <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
+                                                        <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="shop-product-list col-md-12">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-5 col-sm-5">
-                                                <div class="single-product">
-                                                    <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/6.jpg') }}" alt=""></a>
-                                                    </div>
-                                                    <div class="single-product-hover">
-                                                        <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
-                                                            <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-7 col-sm-7">
-                                                <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                    @empty
+                                        <div class="alert alert-danger">
+                                            <h3 class="text-center">Ups!! No existen catalogos, los estamos creando...</h3>
                                         </div>
-                                    </div>
-                                    <div class="shop-product-list col-md-12">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-5 col-sm-5">
-                                                <div class="single-product">
-                                                    <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/1.jpg') }}" alt=""></a>
-                                                    </div>
-                                                    <div class="single-product-hover">
-                                                        <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
-                                                            <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-7 col-sm-7">
-                                                <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-product-list col-md-12">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-5 col-sm-5">
-                                                <div class="single-product">
-                                                    <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/3.jpg') }}" alt=""></a>
-                                                    </div>
-                                                    <div class="single-product-hover">
-                                                        <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
-                                                            <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-7 col-sm-7">
-                                                <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-product-list col-md-12">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-5 col-sm-5">
-                                                <div class="single-product">
-                                                    <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/8.jpg') }}" alt=""></a>
-                                                    </div>
-                                                    <div class="single-product-hover">
-                                                        <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
-                                                            <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-7 col-sm-7">
-                                                <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="shop-product-list col-md-12">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-5 col-sm-5">
-                                                <div class="single-product">
-                                                    <div class="single-product-img">
-                                                        <a href="#"><img src="{{ url('img/product/13.jpg') }}" alt=""></a>
-                                                    </div>
-                                                    <div class="single-product-hover">
-                                                        <div class="single-product-hover-text">
-                                                            <h4><a href="#">Arctic Spa Body Lotion</a></h4>
-                                                            <h2>$ 125.00</h2>
-                                                            <ul class="cart-metalic">
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                                <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                                <li class="hidden-md hidden-sm"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-7 col-sm-7">
-                                                <div class="single-product-info">
-                                                    <h3>Arctic Spa Body Lotion</h3>
-                                                    <h4>$ 125.00</h4>
-                                                    <h5>AVAILABILITY: <span>IN STOCK</span></h5>
-                                                    <h5>OVERVIEW:</h5>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor indunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    <ul class="cart-metalic">
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
-                                                        <li><a href="cart.html" class="add-to-cart">add to cart</a></li>
-                                                        <li class="hidden-xs"><a href="#"><i class="zmdi zmdi-favorite-outline"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
