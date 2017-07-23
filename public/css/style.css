@@ -1094,13 +1094,13 @@ ul.cart-metalic li a.add-to-cart:hover{
 /*  12. Shop grid left CSS
 /*----------------------------------------*/
 .banner-area{
-    background-image: url(/img/banner/img.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 175px;
     position: relative;
 }
+
 .banner-text-wrapper{
     padding: 260px 0 90px 0;
 }
@@ -1129,7 +1129,7 @@ ul.cart-metalic li a.add-to-cart:hover{
 .breadcrumbs ul li a{}
 .shop-grid-area{
     background-color: #FBFBFB;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 .shop-tab ul{
     margin: 0;

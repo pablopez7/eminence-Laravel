@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- banner start -->
-    <div class="banner-area"></div>
+    <div class="banner-area">
+        <img class="image-banner" src="/img/banner/img.jpg" alt="">
+    </div>
     <!-- banner end -->
     <!-- shop grid start -->
     <div class="shop-grid-area">

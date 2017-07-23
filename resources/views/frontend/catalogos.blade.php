@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- banner start -->
-    <div class="banner-area"></div>
+    <div class="banner-area">
+        <img class="image-banner" src="/img/banner/img.jpg" alt="">
+    </div>
     <!-- banner end -->
     <!-- shop grid start -->
     <div class="shop-grid-area">
@@ -48,8 +50,10 @@
                 </div>
             </div>
             <div class="row">
-                @include('frontend.sidebar')
-                <div class="col-md-9 col-xs-12">
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    @include('frontend.sidebar')
+                </div>
+                <div class="col-md-8 col-xs-12">
                     <div class="clearfix"></div>
                     <div class="tab-content">
                         <div id="grid" class="tab-pane active" role="tabpanel">
@@ -57,13 +61,10 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         @forelse($catalogues as $catalogue)
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
-                                                        <a href="/catalogos/{{ $catalogue->id }}/categorias/"><img
-                                                                    class="img-home"
-                                                                    src="{{ url("images/catalogues/$catalogue->image") }}"
-                                                                    alt="{{ $catalogue->title }}"></a>
+                                                        <a href="#"><img src="{{ url("images/catalogues/$catalogue->image") }}" alt="{{ $catalogue->title }}" class="img-catalog"></a>
                                                     </div>
                                                     <div class="single-product-hover">
                                                         <div class="single-product-hover-text">

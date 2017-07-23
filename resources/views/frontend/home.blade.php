@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
-                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='products' class='slider-button hidden-xs'>Productos >></a> </div>
+                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='/catalogos' class='slider-button hidden-xs'>Productos >></a> </div>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
-                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='clients' class='slider-button hidden-xs'>Clientes >></a> </div>
+                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='/clientes' class='slider-button hidden-xs'>Clientes >></a> </div>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
-                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='green-company' class='slider-button hidden-xs'>Empresa Verde >></a> </div>
+                                    <div class="wow bounceInUp" data-wow-duration="3s" data-wow-delay="1s"> <a href='/empresaVerde' class='slider-button hidden-xs'>Empresa Verde >></a> </div>
                                 </div>
                             </div>
                         </div>
