@@ -1,7 +1,9 @@
 @extends('layouts.eminence')
 
 @section('content')
-    <div class="extend"></div>
+    <!-- banner start -->
+    <div class="banner-area"></div>
+    <!-- banner end -->
     <div class="col-xs-12">
         <div class="section-title">
             <h2>{{$category_title}}</h2>

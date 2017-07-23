@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Eminence Admin') }}</title>
+    <title>Eminence Admin</title>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
@@ -31,9 +31,9 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        Eminence Admin
-                    </a>
+                    <a class="navbar-brand" href="{{ url('/') }}">Éminence Web</a>
+                    <a class="navbar-brand" href="{{ url('/catalogues') }}">Catalogo</a>
+                    <a class="navbar-brand" href="{{ url('/clients') }}">Clientes</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

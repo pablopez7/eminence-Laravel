@@ -65,23 +65,6 @@
 
     <!-- header start -->
     <header class="header-area">
-        <!-- Login start -->
-        <div class="header-top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 hidden-sm hidden-xs">
-                        <div class="header-top-right">
-                            <div class="account-login">
-                                <ul>
-                                    <li class="login"><a href="{{ route('login') }}">login</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Login end -->
         <!-- Menu start -->
         <div class="main-header-area">
             <div class="container">
@@ -102,11 +85,11 @@
                                                 @forelse($catalogues as $catalogue)
                                                 <li><a href="/catalogos/{{ $catalogue->id }}/categorias/">{{$catalogue->title}}</a></li>
                                                 @empty
-                                                    <li><a href="starterSets">Sin productos</a></li>
+                                                    <li><a href="/">Sin productos</a></li>
                                                 @endforelse
                                             </ul>
                                         </li>
-                                        <li><a href="clients">Clientes</a></li>
+                                        <li><a href="/clientes">Clientes</a></li>
                                         <li><a href="#">Extras</a>
                                             <ul class="submenu-mainmenu">
                                                 <li><a href="/empresaVerde">Empresa Verde</a></li>
@@ -145,7 +128,7 @@
                                             @endforelse
                                         </ul>
                                     </li>
-                                    <li><a href="clients">Nuestros Clientes</a></li>
+                                    <li><a href="/clientes">Nuestros Clientes</a></li>
                                     <li><a href="#">Extras</a>
                                         <ul>
                                             <li><a href="/empresaVerde">Empresa Verde</a></li>
@@ -206,7 +189,7 @@
                         <div class="footer-widget">
                             <h5>links</h5>
                             <ul>
-                                <li><a href="clients">Nuestros Clientes</a></li>
+                                <li><a href="/clientes">Nuestros Clientes</a></li>
                                 <li><a href="/empresaVerde">Empresa Verde</a></li>
                                 <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                 <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
@@ -233,6 +216,23 @@
                 </div>
             </div>
         </div>
+        <!-- Login start -->
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 hidden-sm hidden-xs">
+                        <div class="header-top-right">
+                            <div class="account-login">
+                                <ul>
+                                    <li class="login"><a href="{{ route('login') }}">login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login end -->
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="row">

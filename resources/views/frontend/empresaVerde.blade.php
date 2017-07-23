@@ -1,7 +1,9 @@
 @extends('layouts.eminence')
 
 @section('content')
-    <div class="extend"></div>
+    <!-- banner start -->
+    <div class="banner-area"></div>
+    <!-- banner end -->
     <!-- newsletter area start -->
     <div class="newsletter-area">
         <div class="container">

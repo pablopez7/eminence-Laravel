@@ -1,13 +1,15 @@
 @extends('layouts.eminence')
 
 @section('content')
-    <div class="extend"></div>
+    <!-- banner start -->
+    <div class="banner-area"></div>
+    <!-- banner end -->
     <!-- contact us start -->
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="section-title">
-                        <h2>Èminence México</h2>
+                        <h2>Éminence México</h2><br><br><br>
                     </div>
                 </div>
             </div>

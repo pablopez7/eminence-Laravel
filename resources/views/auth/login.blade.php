@@ -3,6 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="alert alert-danger">
+                <h4>Esta página es solo para administradores, si llegaste aquí por error, regresa al inicio.</h4>
+                <a href="/" class="btn btn-danger" role="button">IR A INICIO</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
