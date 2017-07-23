@@ -75,7 +75,7 @@
                                             </div>
                                         @empty
                                             <div class="alert alert-danger">
-                                                <h3 class="text-center">Ups!! No existen catalogos, los estamos creando...</h3>
+                                                <h3 class="text-center">Ups!! No existen categorías, las estamos creando...</h3>
                                             </div>
                                         @endforelse
                                     </div>

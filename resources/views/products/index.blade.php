@@ -53,7 +53,8 @@
                                 <td width="10%">{{ $product->status }}</td>
                                 <td width="10%">
 
-                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{$category_id}}/products/{{ $product->id }}/edit" class="btn btn-warning"
+                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{$category_id}}/products/{{ $product->id }}/edit"
+                                       class="btn btn-warning"
                                        role="button">
                                         <i class="glyphicon glyphicon-pencil"></i></a>
 

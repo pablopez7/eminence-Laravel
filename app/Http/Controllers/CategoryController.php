@@ -20,7 +20,7 @@ class CategoryController extends Controller
      */
     public function index(Catalogue $catalogue){
 
-        $categories = $catalogue->categories;
+        $categories = Category::paginate(2);
         $catalogue_id = $catalogue->id;
 
         return view('categories.index', ['categories' => $categories, 'catalogue_id' => $catalogue_id]);

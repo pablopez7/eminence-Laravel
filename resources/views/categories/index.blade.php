@@ -31,6 +31,12 @@
 
                 @include('components.flash')
 
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($categories)
+                        {{ $categories->links() }}
+                    @endif
+                </div>
+
                 <div class="row">
                     <table class="table table-hover" width="100%">
                         <thead>
@@ -53,7 +59,8 @@
                                 <td width="10%">{{ $category->status }}</td>
                                 <td width="10%">
 
-                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{ $category->id }}/edit" class="btn btn-warning"
+                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{ $category->id }}/edit"
+                                       class="btn btn-warning"
                                        role="button">
                                         <i class="glyphicon glyphicon-pencil"></i></a>
 
@@ -62,7 +69,8 @@
                                                 class="glyphicon glyphicon-trash"></i></button>
                                     {!! Form::close() !!}
 
-                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{ $category->id }}/products/" class="btn btn-primary"
+                                    <a href="/catalogues/{{$catalogue_id}}/categories/{{ $category->id }}/products/"
+                                       class="btn btn-primary"
                                        role="button">
                                         <i class="glyphicon glyphicon-chevron-right"></i></a>
                                 </td>
@@ -76,6 +84,13 @@
                     </table>
                 </div>
                 <hr>
+
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($categories)
+                        {{ $categories->links() }}
+                    @endif
+                </div>
+
             </div>
             <!--row-->
         </div>

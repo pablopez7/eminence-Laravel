@@ -17,7 +17,7 @@ class CatalogueController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $catalogues = Catalogue::all();
+        $catalogues = Catalogue::paginate(5);
 
         return view('catalogues.index', ['catalogues' => $catalogues]);
     }

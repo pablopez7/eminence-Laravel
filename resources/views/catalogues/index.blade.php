@@ -28,6 +28,12 @@
 
                 @include('components.flash')
 
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($catalogues)
+                        {{ $catalogues->links() }}
+                    @endif
+                </div>
+
                 <div class="row">
                     <table class="table table-hover" width="100%">
                         <thead>
@@ -72,6 +78,13 @@
                     </table>
                 </div>
                 <hr>
+
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($catalogues)
+                        {{ $catalogues->links() }}
+                    @endif
+                </div>
+
             </div>
             <!--row-->
         </div>
