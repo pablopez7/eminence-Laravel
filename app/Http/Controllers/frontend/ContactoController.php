@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\frontend;
 
+
+use App\Catalogue;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class ContactoController extends Controller
 {
@@ -12,9 +17,12 @@ class ContactoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Catalogue $catalogue)
     {
-        return view('frontend.contacto');
+        $categories = Category::where('status', 'active')->get();
+        $catalogues = Catalogue::where('status', 'active')->get();
+
+        return view('frontend.contacto', ['categories' => $categories, 'catalogues' => $catalogues]);
     }
 
     /**
@@ -35,7 +43,12 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::send('emails.contact', $request->all(), function ($msj){
+            $msj->subject('Contacto desde www.eminence.mx');
+            $msj->to('pablo@smartsystem.mx', 'pablopez7@gmail.com');
+        });
+
+        return Redirect::back()->with('message', 'La información ha sido enviada exitosamente al correo: contacto@eminence.mx, nos pondremos en contacto contigo lo antes posible.');
     }
 
     /**

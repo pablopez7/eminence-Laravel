@@ -19,7 +19,15 @@ class ClientController extends Controller
     public function index(){
         $clients = Client::all();
 
-        return view('clients.index', ['clients' => $clients]);
+        $professionals = Client::where('kind', 'professional')
+                                ->orderBy('order', 'asc')
+                                ->get();
+
+        $retails = Client::where('kind', 'retail')
+                            ->orderBy('order', 'asc')
+                            ->get();
+
+        return view('clients.index', ['clients' => $clients, 'professionals' => $professionals, 'retails' => $retails]);
     }
 
     /**
@@ -102,7 +110,7 @@ class ClientController extends Controller
             'kind.required' => 'Es necesario saber el tipo de cliente.'
         ]);
 
-        $client->fill($request->intersect(['title', 'description', 'image', 'status', 'kind']));
+        $client->fill($request->intersect(['title', 'description', 'image', 'status', 'kind', 'order']));
 
         if ($request->hasFile('image')){
 

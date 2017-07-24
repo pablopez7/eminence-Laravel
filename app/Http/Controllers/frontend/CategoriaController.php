@@ -42,14 +42,6 @@ class CategoriaController extends Controller
         return view('frontend.sidebar', ['categories' => $categories]);
     }
 
-    public function contacto(Catalogue $catalogue)
-    {
-        $categories = $catalogue->categories;
-        $catalogues = Catalogue::all();
-
-        return view('frontend.contacto', ['categories' => $categories, 'catalogues' => $catalogues]);
-    }
-
     public function empresaVerde(Catalogue $catalogue)
     {
         $categories = $catalogue->categories;

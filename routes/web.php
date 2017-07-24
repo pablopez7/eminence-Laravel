@@ -22,9 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/catalogos', 'frontend\CatalogoController@catalogos')->name('catalogos');
 
 Route::get('/catalogos/{catalogue}/categorias', 'frontend\CategoriaController@index')->name('categorias');
-Route::get('/contacto', 'frontend\CategoriaController@contacto')->name('contacto');
 Route::get('/empresaVerde', 'frontend\CategoriaController@empresaVerde')->name('empresaVerde');
-
 Route::get('/clientes', 'frontend\ClienteController@index')->name('clientes');
 
 Route::get('/catalogos/{catalogue}/categorias/{category}/productos', 'frontend\ProductoController@index')->name('productos');
@@ -32,6 +30,8 @@ Route::get('/catalogos/{catalogue}/categorias/{category}/productos', 'frontend\P
 Route::resource('/', "frontend\CatalogoController");
 Route::resource('layouts/eminence', "frontend\CatalogoController");
 Route::resource('frontend/catalogos', "frontend\CatalogoController");
+
+Route::resource('contacto', "frontend\ContactoController");
 
 
 //Rutas Administracion

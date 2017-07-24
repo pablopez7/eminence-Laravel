@@ -16,18 +16,28 @@
                 </div>
             </div>
             <div class="row">
+                @if (session('message'))
+                    <div class="padding">
+                        <div role="alert" class="alert alert-success alert-dismissible">
+                            <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                                <span aria-hidden="true">×</span>
+                            </button> <h4><strong>Gracias!</strong></h4> <h4>{{ session('message') }}</h4>
+                        </div>
+                    </div>
+                @endif
                 <div class="contact-form">
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                         <div class="contact-form-info">
                             <h2>Nosotros te contactamos</h2>
-                            <form action="#">
-                                <input type="text" placeholder="Nombre*">
-                                <input type="email" placeholder="e-mail*">
-                                <input type="phone" placeholder="Teléfono">
-                                <input type="text" placeholder="Asunto">
-                                <textarea name="message" placeholder="Mensaje" rows="5" cols="20"></textarea>
+                            {!! Form::open(['url' => '/contacto', 'method' => 'POST']) !!}
+                                <input type="hidden" name="_token" id="_token" value="<?= csrf_token(); ?>">
+                                <input type="text" name="nombre" placeholder="Nombre*">
+                                <input type="email" name="email" placeholder="e-mail*">
+                                <input type="phone" name="telefono" placeholder="Teléfono">
+                                <input type="text" name="asunto" placeholder="Asunto">
+                                <textarea name="mensaje" placeholder="Mensaje" rows="5" cols="20"></textarea>
                                 <button type="submit">Enviar</button>
-                            </form>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                     <div class="col-lg-5 col-lg-offse-2 col-md-5 col-md-offset-2 col-sm-12 col-xs-12">

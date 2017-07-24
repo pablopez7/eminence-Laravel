@@ -52,7 +52,13 @@
                             {{ Form::select('status', ['active' => 'Activo', 'inactive' => 'Inactivo'], 'active', ['class' => 'form-control']) }}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg pull-right">Crear</button>
+                            <div class="col-xs-6 col-md-6 col-lg-6">
+                                {{ Form::label('Organizar', null, ['class' => 'control-label']) }}
+                                {{ Form::number('order', '', ['class' => 'form-control', 'id' => 'recipient-name', 'placeholder' => '#']) }}
+                            </div>
+                            <div class="col-xs-6 col-md-6 col-lg-6">
+                                <button type="submit" class="btn btn-success btn-lg pull-right">Crear</button>
+                            </div>
                         </div>
                     </div>
                     {!! Form::close() !!}

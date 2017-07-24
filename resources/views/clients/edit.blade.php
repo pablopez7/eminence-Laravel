@@ -71,7 +71,13 @@
                     {{ Form::select('status', ['active' => 'Activo', 'inactive' => 'Inactivo'], $client->status, ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg pull-right">Editar</button>
+                    <div class="col-xs-6 col-md-6 col-lg-6">
+                        {{ Form::label('Organizar', null, ['class' => 'control-label']) }}
+                        {{ Form::number('order', $client->order, ['class' => 'form-control', 'id' => 'recipient-name', 'placeholder' => '#']) }}
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-lg-6">
+                        <button type="submit" class="btn btn-success btn-lg pull-right">Editar</button>
+                    </div>
                 </div>
             </div>
             {!! Form::close() !!}
