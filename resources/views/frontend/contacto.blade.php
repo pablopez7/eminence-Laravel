@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="section-title">
+                    <div class="section-title space-title">
                         <h2>Éminence México</h2><br><br><br>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                             <form action="#">
                                 <input type="text" placeholder="Nombre*">
                                 <input type="email" placeholder="e-mail*">
-                                <input type="phone" placeholder="Telefono">
+                                <input type="phone" placeholder="Teléfono">
                                 <input type="text" placeholder="Asunto">
                                 <textarea name="message" placeholder="Mensaje" rows="5" cols="20"></textarea>
                                 <button type="submit">Enviar</button>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-lg-5 col-lg-offse-2 col-md-5 col-md-offset-2 col-sm-12 col-xs-12">
                         <div class="contact-address">
-                            <h2>Contactanos</h2>
+                            <h2>Contáctanos</h2>
                             <div class="contact-address-wrapper">
                                 <div class="single-address">
                                     <div class="contact-icon">
@@ -40,7 +40,7 @@
                                     </div>
                                     <div class="contact-info">
                                         <h4>Claudia Mendez Cuervo</h4>
-                                        <p>Mexico Managing Director</p>
+                                        <p>México Managing Director</p>
                                     </div>
                                 </div>
                                 <div class="single-address">
@@ -60,7 +60,9 @@
                                     </div>
                                 </div>
                                 <div><br/>
-                                    <p>Visita nuestras redes sociales y no olvides comprartir</p>
+                                    <p>Visita nuestra tienda y nuestras redes sociales<br>
+                                        No olvides compartir.
+                                    </p>
                                     <div class="newsletter-social-icon">
                                         <ul>
                                             <li class="google-plus"><a href="https://www.instagram.com/eminencemx/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>

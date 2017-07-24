@@ -5,10 +5,10 @@
         <div class="row">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="text-center">Editar Categoria</h1>
+                    <h1 class="text-center">Editar Categoría</h1>
                     <!-- Button trigger modal -->
                 </div>
-                <a href="{{ url('catalogues/'.$catalogue_id.'/categories') }}" type="button" class="btn btn-primary pull-right">Regresar</a>
+                <a href="{{ url('catalogues/'.$catalogue_id.'/categories') }}" type="button" class="btn btn-primary pull-right"><< Regresar</a>
             </div>
             <hr>
 
@@ -42,7 +42,7 @@
                                accept="image/*"/>
                         <div class="drag-text">
                             <img class="file-upload-image" src="{{ url("images/categories/$category->image") }}" alt="">
-                            <h4>Cambia la imagen aqui</h4>
+                            <h4>Cambia la imagen aquí</h4>
                         </div>
                     </div>
                     <div class="file-upload-content">
@@ -78,7 +78,7 @@
             <a href="{{ url('catalogues/'.$catalogue_id.'/categories') }}" type="button" class="btn btn-danger">Cancelar</a>
         </div>
         <div class="col-xs-6 col-md-6 text-center">
-            <h4 class="text-center">Nota: El titulo no se debe repetir con otros productos, pero se puede repetir asi mismo.</h4>
+            <h4 class="text-center">Nota: El titulo no se debe repetir con otros productos, pero se puede repetir así mismo.</h4>
         </div>
     </div>
 @endsection

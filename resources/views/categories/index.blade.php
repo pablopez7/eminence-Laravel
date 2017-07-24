@@ -9,7 +9,7 @@
                         <i class="glyphicon glyphicon-chevron-left"></i></a>
                 </div>
                 <div class="col-md-4">
-                    <h1 class="text-center">Categorias</h1>
+                    <h1 class="text-center">Categorías del catálogo: <b>{{ $catalogue_title }}</b></h1>
                 </div>
                 <div class="col-md-4">
                     @include('categories.create')
@@ -43,7 +43,7 @@
                         <tr>
                             <th class="text-center">Imagen</th>
                             <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
+                            <th class="text-center">Descripción</th>
                             <th>Estatus</th>
                             <th>Acciones</th>
                         </tr>
@@ -78,7 +78,7 @@
                             </tbody>
                         @empty
                             <div class="alert alert-danger">
-                                <h3 class="text-center">Ups!! No existen categorias, crea una...</h3>
+                                <h3 class="text-center">Ups!! No existen categorías, crea una...</h3>
                             </div>
                         @endforelse
                     </table>

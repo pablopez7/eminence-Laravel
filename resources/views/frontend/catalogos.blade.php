@@ -16,19 +16,16 @@
                             <div class="shop-tab clearfix">
                                 <!-- Nav tabs -->
                                 <ul role="tablist">
-                                    <li role="presentation" class="active"><a data-toggle="tab" role="tab"
-                                                                              aria-controls="grid" class="grid-view"
-                                                                              href="#grid"><i
-                                                    class="zmdi zmdi-apps"></i></a></li>
-                                    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list"
-                                                               class="list-view" href="#list"><i
-                                                    class="zmdi zmdi-view-list-alt"></i></a></li>
+                                    <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="grid" class="grid-view" href="#grid"><i class="zmdi zmdi-apps"></i></a></li>
+                                    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list" class="list-view" href="#list"><i class="zmdi zmdi-view-list-alt"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-5 col-sm-3 hidden-xs">
-                            <div class="show text-center">
-                                <p>show: 16 items</p>
+                            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                                @if($catalogues)
+                                    {{ $catalogues->links() }}
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
@@ -82,8 +79,7 @@
                                             </div>
                                         @empty
                                             <div class="alert alert-danger">
-                                                <h3 class="text-center">Ups!! No existen catalogos, los estamos
-                                                    creando...</h3>
+                                                <h3 class="text-center">Ups!! No existen catálogos, los estamos creando...</h3>
                                             </div>
                                         @endforelse
                                     </div>
@@ -131,8 +127,7 @@
                                             </div>
                                         @empty
                                             <div class="alert alert-danger">
-                                                <h3 class="text-center">Ups!! No existen catalogos, los estamos
-                                                    creando...</h3>
+                                                <h3 class="text-center">Ups!! No existen catálogos, los estamos creando...</h3>
                                             </div>
                                         @endforelse
                                     </div>

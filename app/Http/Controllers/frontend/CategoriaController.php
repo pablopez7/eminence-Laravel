@@ -15,12 +15,24 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Catalogue $catalogue){
-        $catalogues = Catalogue::all();
-        $categories = $catalogue->categories;
+        $catalogues = Catalogue::where('status', 'active')->get();
+
+        $categories = Category::where('status', 'active')
+                                ->where('catalogue_id', $catalogue->id)
+                                ->orderBy('id', 'desc')
+                                ->paginate(16);
+
         $catalogue_id = $catalogue->id;
         $catalogue_title = $catalogue->title;
+        $catalogue_description = $catalogue->description;
 
-        return view('frontend.categorias', ['categories' => $categories, 'catalogues' => $catalogues, 'catalogue_id' => $catalogue_id, 'catalogue_title' => $catalogue_title]);
+        return view('frontend.categorias', [
+            'categories' => $categories,
+            'catalogues' => $catalogues,
+            'catalogue_id' => $catalogue_id,
+            'catalogue_title' => $catalogue_title,
+            'catalogue_description' => $catalogue_description
+        ]);
     }
 
     public function sidebar(Catalogue $catalogue)

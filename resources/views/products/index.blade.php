@@ -9,7 +9,7 @@
                         <i class="glyphicon glyphicon-chevron-left"></i></a>
                 </div>
                 <div class="col-md-4">
-                    <h1 class="text-center">Productos</h1>
+                    <h1 class="text-center">Productos de la categoría: <b>{{ $category_title }}</h1>
                 </div>
                 <div class="col-md-4">
                     @include('products.create')
@@ -31,13 +31,19 @@
 
                 @include('components.flash')
 
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($products)
+                        {{ $products->links() }}
+                    @endif
+                </div>
+
                 <div class="row">
                     <table class="table table-hover" width="100%">
                         <thead>
                         <tr>
                             <th class="text-center">Imagen</th>
                             <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
+                            <th class="text-center">Descripción</th>
                             <th>Estatus</th>
                             <th>Acciones</th>
                         </tr>
@@ -74,6 +80,13 @@
                     </table>
                 </div>
                 <hr>
+
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    @if($products)
+                        {{ $products->links() }}
+                    @endif
+                </div>
+
             </div>
             <!--row-->
         </div>

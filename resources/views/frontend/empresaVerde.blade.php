@@ -11,7 +11,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="section-title">
+                    <div class="section-title space-title">
                         <h2>Empresa Verde</h2>
                     </div>
                 </div>

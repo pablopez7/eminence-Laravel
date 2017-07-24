@@ -46,12 +46,12 @@ class ClientController extends Controller
             'kind' => 'required',
             'image' => 'required|image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.required' => 'Es necesario introducir una imagen',
-            'kind.required' => 'Es necesario saber que tipo de cliente es.'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.required' => 'Es necesario introducir una imagen.',
+            'kind.required' => 'Es necesario saber el tipo de cliente.'
         ]);
 
         $img = $request->file('image');
@@ -65,7 +65,7 @@ class ClientController extends Controller
         $client = Client::create($data);
 
         if ($client->save()) {
-            return redirect('clients')->with('message', 'Catalogo creado correctamente.');
+            return redirect('clients')->with('message', 'Cliente creado correctamente.');
         }
     }
 
@@ -94,12 +94,12 @@ class ClientController extends Controller
             'kind' => 'required',
             'image' => 'image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.image' => 'Es necesario introducir una imagen',
-            'kind.required' => 'Es necesario saber que tipo de cliente es.'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.required' => 'Es necesario introducir una imagen.',
+            'kind.required' => 'Es necesario saber el tipo de cliente.'
         ]);
 
         $client->fill($request->intersect(['title', 'description', 'image', 'status', 'kind']));

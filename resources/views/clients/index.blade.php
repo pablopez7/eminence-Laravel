@@ -34,7 +34,7 @@
                         <tr>
                             <th class="text-center">Imagen</th>
                             <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
+                            <th class="text-center">Descripción</th>
                             <th>Tipo</th>
                             <th>Estatus</th>
                             <th>Acciones</th>

@@ -16,87 +16,27 @@ class CatalogoController extends Controller
      */
     public function index()
     {
-        $catalogues = Catalogue::all();
+        $catalogues = Catalogue::where('status', 'active')->get();
 
         return view('frontend.home', ['catalogues' => $catalogues]);
     }
 
     public function menu(){
-        $catalogues = Catalogue::all();
+        $catalogues = Catalogue::where('status', 'active')->get();
 
         return view('layouts.eminence', ['catalogues' => $catalogues]);
     }
 
     public function catalogos(Category $category){
-        $catalogues = Catalogue::all();
-        $categories = Category::all();
+        $catalogues = Catalogue::where('status', 'active')
+                                ->orderBy('id', 'asc')
+                                ->paginate(4);
 
-        return view('frontend.catalogos', ['catalogues' => $catalogues, 'categories' => $categories]);
-    }
+        $categories = Category::where('status', 'active')->get();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Catalogue  $catalogue
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Catalogue $catalogue)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Catalogue  $catalogue
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Catalogue $catalogue)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Catalogue  $catalogue
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Catalogue $catalogue)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Catalogue  $catalogue
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Catalogue $catalogue)
-    {
-        //
+        return view('frontend.catalogos', [
+            'catalogues' => $catalogues,
+            'categories' => $categories
+        ]);
     }
 }

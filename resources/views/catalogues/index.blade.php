@@ -5,7 +5,7 @@
         <div class="row">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="text-center">Catalogos</h1>
+                    <h1 class="text-center">Catálogos</h1>
                     <!-- Button trigger modal -->
                 </div>
                 <div class="col-md-6">
@@ -40,7 +40,7 @@
                         <tr>
                             <th class="text-center">Imagen</th>
                             <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
+                            <th class="text-center">Descripción</th>
                             <th>Estatus</th>
                             <th>Acciones</th>
                         </tr>
@@ -72,7 +72,7 @@
                             </tbody>
                         @empty
                             <div class="alert alert-danger">
-                                <h3 class="text-center">Ups!! No existen catalogos, crea uno...</h3>
+                                <h3 class="text-center">Ups!! No existen catálogos, crea uno...</h3>
                             </div>
                         @endforelse
                     </table>

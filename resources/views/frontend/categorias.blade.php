@@ -7,8 +7,18 @@
     </div>
     <!-- banner end -->
     <div class="col-xs-12">
-        <div class="section-title">
-            <h2>{{$catalogue_title}}</h2>
+        <div class="row">
+            <div class="section-title space-title">
+                <h2>{{$catalogue_title}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="container">
+            <div class="row">
+                <h4 class="text-center">{{$catalogue_description}}</h4>
+            </div>
         </div>
     </div>
     <!-- shop grid start -->
@@ -21,14 +31,22 @@
                             <div class="shop-tab clearfix">
                                 <!-- Nav tabs -->
                                 <ul role="tablist">
-                                    <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="grid" class="grid-view" href="#grid"><i class="zmdi zmdi-apps"></i></a></li>
-                                    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list" class="list-view" href="#list"><i class="zmdi zmdi-view-list-alt"></i></a></li>
+                                    <li role="presentation" class="active"><a data-toggle="tab" role="tab" aria-controls="grid" class="grid-view" href="#grid">
+                                            <i class="zmdi zmdi-apps"></i>
+                                        </a>
+                                    </li>
+                                    <li role="presentation"><a data-toggle="tab" role="tab" aria-controls="list" class="list-view" href="#list">
+                                            <i class="zmdi zmdi-view-list-alt"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-5 col-sm-3 hidden-xs">
-                            <div class="show text-center">
-                                <p>show: 16 items</p>
+                            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                                @if($categories)
+                                    {{ $categories->links() }}
+                                @endif
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">

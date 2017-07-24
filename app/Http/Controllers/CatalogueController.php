@@ -17,7 +17,7 @@ class CatalogueController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $catalogues = Catalogue::paginate(5);
+        $catalogues = Catalogue::orderBy('id', 'desc')->paginate(5);
 
         return view('catalogues.index', ['catalogues' => $catalogues]);
     }
@@ -45,11 +45,11 @@ class CatalogueController extends Controller
             'status' => 'required|max:10',
             'image' => 'required|image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.required' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.required' => 'Es necesario introducir una imagen.'
         ]);
 
         $img = $request->file('image');
@@ -104,11 +104,11 @@ class CatalogueController extends Controller
             'status' => 'required|max:10',
             'image' => 'image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.image' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.image' => 'Es necesario introducir una imagen.'
         ]);
 
         $catalogue->fill($request->intersect(['title', 'description', 'image', 'status']));
@@ -129,7 +129,7 @@ class CatalogueController extends Controller
         $catalogue->user_id = Auth::user()->id;
 
         if ($catalogue->save()) {
-            return redirect('catalogues')->with('message', 'Catalogo editado correctamente.');
+            return redirect('catalogues')->with('message', 'Catálogo editado correctamente.');
         }
     }
 
@@ -142,6 +142,6 @@ class CatalogueController extends Controller
     public function destroy(Catalogue $catalogue)
     {
         $catalogue->delete();
-        return redirect('catalogues')->with('message', 'Catalogo eliminado correctamente.');
+        return redirect('catalogues')->with('message', 'Catálogo eliminado correctamente.');
     }
 }

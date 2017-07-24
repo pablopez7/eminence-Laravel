@@ -42,7 +42,7 @@
                                accept="image/*"/>
                         <div class="drag-text">
                             <img class="file-upload-image" src="{{ url("images/clients/$client->image") }}" alt="">
-                            <h4>Cambia la imagen aqui</h4>
+                            <h4>Cambia la imagen aquí</h4>
                         </div>
                     </div>
                     <div class="file-upload-content">
@@ -81,7 +81,7 @@
             <a href="{{ url('/clients') }}" type="button" class="btn btn-danger">Cancelar</a>
         </div>
         <div class="col-xs-6 col-md-6 text-center">
-            <h4 class="text-center">Nota: El titulo no se debe repetir con otros productos, pero se puede repetir asi mismo.</h4>
+            <h4 class="text-center">Nota: El titulo no se debe repetir con otros productos, pero se puede repetir así mismo.</h4>
         </div>
     </div>
 @endsection

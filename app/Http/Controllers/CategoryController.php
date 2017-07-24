@@ -20,10 +20,18 @@ class CategoryController extends Controller
      */
     public function index(Catalogue $catalogue){
 
-        $categories = Category::paginate(2);
-        $catalogue_id = $catalogue->id;
+        $categories = Category::where('catalogue_id', $catalogue->id)
+                                ->orderBy('id', 'desc')
+                                ->paginate(10);
 
-        return view('categories.index', ['categories' => $categories, 'catalogue_id' => $catalogue_id]);
+        $catalogue_id = $catalogue->id;
+        $catalogue_title = $catalogue->title;
+
+        return view('categories.index', [
+            'categories' => $categories,
+            'catalogue_id' => $catalogue_id,
+            'catalogue_title' => $catalogue_title
+        ]);
     }
 
     /**
@@ -49,11 +57,11 @@ class CategoryController extends Controller
             'status' => 'required|max:10',
             'image' => 'required|image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.required' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.required' => 'Es necesario introducir una imagen.'
         ]);
 
         $img = $request->file('image');
@@ -68,7 +76,7 @@ class CategoryController extends Controller
         $category = Category::create($data);
 
         if ($category->save()) {
-            return Redirect::back()->with('message', 'Categoria creada correctamente.');
+            return Redirect::back()->with('message', 'Categoría creada correctamente.');
         }
     }
 
@@ -111,11 +119,11 @@ class CategoryController extends Controller
             'status' => 'required|max:10',
             'image' => 'image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.image' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.image' => 'Es necesario introducir una imagen.'
         ]);
 
         $this->verificaCatalogue($catalogue, $category);
@@ -139,7 +147,7 @@ class CategoryController extends Controller
         $category->user_id = Auth::user()->id;
 
         if ($category->save()) {
-            return Redirect::back()->with('message', 'Categoria editada correctamente.');
+            return Redirect::back()->with('message', 'Categoría editada correctamente.');
         }
     }
 
@@ -159,7 +167,7 @@ class CategoryController extends Controller
 
     protected function verificaCatalogue(Catalogue $catalogue, Category $category){
         if ($catalogue->id != $category->catalogue_id){
-            return Redirect::back()->with('message', 'La categoria que tratas de editar no corresponde a este catalogo.');
+            return Redirect::back()->with('message', 'La categoría que tratas de editar no corresponde a este catálogo..');
         }
     }
 }

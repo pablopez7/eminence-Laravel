@@ -14,12 +14,20 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $clients = Client::all();
+    public function index(){
+        $professionals = Client::where('status', 'active')
+            ->where('kind', 'professional')
+            ->orderBy('order', 'asc')
+            ->get();
+
+        $retails = Client::where('status', 'active')
+            ->where('kind', 'retail')
+            ->orderBy('order', 'asc')
+            ->get();
+
         $catalogues = Catalogue::all();
 
-        return view('frontend.clientes', ['clients' => $clients, 'catalogues' => $catalogues]);
+        return view('frontend.clientes', ['professionals' => $professionals, 'retails' => $retails, 'catalogues' => $catalogues]);
     }
 
     /**

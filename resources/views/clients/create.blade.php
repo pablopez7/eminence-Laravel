@@ -23,7 +23,7 @@
                                 <input class="file-upload-input" type='file' name="image"
                                        onchange="readURL(this);" accept="image/*"/>
                                 <div class="drag-text">
-                                    <h3>Arrastra una imagen hasta aqui</h3>
+                                    <h3>Arrastra una imagen hasta aquí.</h3>
                                 </div>
                             </div>
                             <div class="file-upload-content">
@@ -39,11 +39,11 @@
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
                             {{ Form::label('Titulo', null, ['class' => 'control-label']) }}
-                            {{ Form::text('title', '', ['class' => 'form-control', 'id' => 'recipient-name', 'placeholder' => 'Titulo de la Categoria']) }}
+                            {{ Form::text('title', '', ['class' => 'form-control', 'id' => 'recipient-name', 'placeholder' => 'Nombre del Cliente']) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('Descripcion', null, ['class' => 'control-label']) }}
-                            {{ Form::textarea('description', '', ['class' => 'form-control', 'rows' => '3', 'id' => 'message-text', 'placeholder' => 'Descripcion']) }}
+                            {{ Form::textarea('description', '', ['class' => 'form-control', 'rows' => '3', 'id' => 'message-text', 'placeholder' => 'Descripción']) }}
                         </div>
                         <div class="form-group">
                             {{ Form::select('kind', ['professional' => 'Professional', 'retail' => 'Retail'], 'professional', ['class' => 'form-control']) }}

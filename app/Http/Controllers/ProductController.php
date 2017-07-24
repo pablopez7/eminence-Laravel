@@ -21,11 +21,20 @@ class ProductController extends Controller
      */
     public function index(Catalogue $catalogue, Category $category)
     {
-        $products = $category->products;
+        $products = Product::where('category_id', $category->id)
+                            ->orderBy('id', 'desc')
+                            ->paginate(15);
+
         $category_id = $category->id;
         $catalogue_id = $catalogue->id;
+        $category_title = $category->title;
 
-        return view('products.index', ['products' => $products, 'category_id' => $category_id, 'catalogue_id' => $catalogue_id]);
+        return view('products.index', [
+            'products' => $products,
+            'category_id' => $category_id,
+            'catalogue_id' => $catalogue_id,
+            'category_title' => $category_title
+        ]);
     }
 
     /**
@@ -51,11 +60,11 @@ class ProductController extends Controller
             'status' => 'required|max:10',
             'image' => 'required|image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.required' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.required' => 'Es necesario introducir una imagen.'
         ]);
 
         $img = $request->file('image');
@@ -71,7 +80,7 @@ class ProductController extends Controller
         $category = Product::create($data);
 
         if ($category->save()) {
-            return Redirect::back()->with('message', 'Categoria creada correctamente.');
+            return Redirect::back()->with('message', 'Categoría creada correctamente.');
         }
     }
 
@@ -115,11 +124,11 @@ class ProductController extends Controller
             'status' => 'required|max:10',
             'image' => 'image'
         ],[
-            'title.required' => 'El titulo es requerido',
-            'title.unique' => 'El titulo que has introduciodo ya existe',
-            'title.max' => 'El titulo solo acepta un maximo de 250 caracteres',
-            'description.required' => 'La descripcion es requerida',
-            'image.image' => 'Es necesario introducir una imagen'
+            'title.required' => 'El título es requerido.',
+            'title.unique' => 'El título que has introducido ya existe.',
+            'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
+            'description.required' => 'La descripción es requerida.',
+            'image.image' => 'Es necesario introducir una imagen.'
         ]);
 
         $this->verificaCategory($category, $product);
@@ -143,7 +152,7 @@ class ProductController extends Controller
         $product->user_id = Auth::user()->id;
 
         if ($product->save()) {
-            return Redirect::back()->with('message', 'Categoria editada correctamente.');
+            return Redirect::back()->with('message', 'Categoría editada correctamente.');
         }
     }
 
@@ -158,12 +167,12 @@ class ProductController extends Controller
         $this->verificaCategory($category, $product);
 
         $product->delete();
-        return Redirect::back()->with('message', 'Categoria eliminada correctamente.');
+        return Redirect::back()->with('message', 'Categoría eliminada correctamente.');
     }
 
     protected function verificaCategory(Category $category, Product $product){
         if ($category->id != $product->product_id){
-            return Redirect::back()->with('message', 'La categoria que tratas de editar no corresponde a este catalogo.');
+            return Redirect::back()->with('message', 'La categoría que tratas de editar no corresponde a este catálogo.');
         }
     }
 }

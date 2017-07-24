@@ -16,13 +16,28 @@ class ProductoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Catalogue $catalogue, Category $category){
-        $catalogues = Catalogue::all();
-        $categories = Category::all();
-        $products = $category->products;
+
+        $catalogues = Catalogue::where('status', 'active')->get();
+        $categories = Category::where('status', 'active')->get();
+
+        $products = Product::where('status', 'active')
+                            ->where('category_id', $category->id)
+                            ->orderBy('id', 'desc')
+                            ->paginate(12);
+
         $category_id = $category->id;
         $category_title = $category->title;
         $catalogue_id = $catalogue->id;
+        $category_description = $category->description;
 
-        return view('frontend.productos', ['products' => $products, 'categories' => $categories, 'catalogues' => $catalogues, 'category_id' => $category_id, 'category_title' => $category_title, 'catalogue_id' => $catalogue_id]);
+        return view('frontend.productos', [
+            'products' => $products,
+            'categories' => $categories,
+            'catalogues' => $catalogues,
+            'category_id' => $category_id,
+            'category_title' => $category_title,
+            'catalogue_id' => $catalogue_id,
+            'category_description' => $category_description
+        ]);
     }
 }

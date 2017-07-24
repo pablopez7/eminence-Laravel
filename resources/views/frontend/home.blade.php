@@ -53,8 +53,7 @@
                                 </div>
                                 <div class="slider-content slider-text-2 text-left">
                                     <div class="wow bounceInLeft" data-wow-duration="3s" data-wow-delay="1s">
-                                        <p class="text-slide">Cada cliente es tan importante para nosotros, por eso cada producto es elaborado
-                                            con la mas alta calidad.</p>
+                                        <p class="text-slide">Cada cliente es tan importante para nosotros, por eso cada producto es elaborado con la más alta calidad.</p>
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
@@ -81,7 +80,7 @@
                                 <div class="slider-content slider-text-2 text-left">
                                     <div class="wow bounceInLeft" data-wow-duration="3s" data-wow-delay="1s">
                                         <p class="text-slide">Somos una empresa Socialmente responsable, y solo procuramos que cada cliente reciba
-                                            un producto de la mas alta calidad.</p>
+                                            un producto de la más alta calidad.</p>
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
@@ -107,7 +106,7 @@
                                 </div>
                                 <div class="slider-content slider-text-2 text-left">
                                     <div class="wow bounceInLeft" data-wow-duration="3s" data-wow-delay="1s">
-                                        <p class="text-slide">Puedes ver mas detalles de cada producto en nustra pagina en ingles. <code>www.eminenceorganics.com/us</code></p>
+                                        <p class="text-slide">Puedes ver más detalles de cada producto en nuestra página en ingles. <code>www.eminenceorganics.com/us</code></p>
                                     </div>
                                 </div>
                                 <div class="slider-content slider-text-3 text-left hidden-sm">
@@ -161,7 +160,7 @@
             </div>
             @empty
                 <div class="alert alert-danger">
-                    <h3 class="text-center">Ups!! Por el momento no tenemos productos, pero muy pronto estaran listos...</h3>
+                    <h3 class="text-center">Ups!! Por el momento no tenemos productos, pero muy pronto estarán listos...</h3>
                 </div>
             @endforelse
         </div>
@@ -194,7 +193,7 @@
                 <div class="single-service">
                     <div class="single-service-icon"> <i class="zmdi zmdi-phone"></i> </div>
                     <div class="single-service-info">
-                        <h5>atencion personalizada</h5>
+                        <h5>atención personalizada</h5>
                         <p>Tenemos un grupo de profesionales listos para asesorarte</p>
                     </div>
                 </div>

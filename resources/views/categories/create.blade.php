@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-primary pull-right" data-toggle="modal"
-        data-target="#crear">Nueva Categoria
+        data-target="#crear">Nueva Categoría
 </button>
 
 <!-- Modal -->
@@ -23,7 +23,7 @@
                                 <input class="file-upload-input" type='file' name="image"
                                        onchange="readURL(this);" accept="image/*"/>
                                 <div class="drag-text">
-                                    <h3>Arrastra una imagen hasta aqui</h3>
+                                    <h3>Arrastra una imagen hasta aquí.</h3>
                                 </div>
                             </div>
                             <div class="file-upload-content">
