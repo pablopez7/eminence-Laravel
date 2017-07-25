@@ -12,6 +12,21 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="shop-item-filter">
+                        <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
+                            <div class="hidden filter-by">
+                                <h4>Short by: </h4>
+                                <form action="#">
+                                    <div class="select-filter">
+                                        <select>
+                                            <option value="10">popular</option>
+                                            <option value="20">premium</option>
+                                            <option value="30">standard</option>
+                                            <option value="30">gold</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
                             <div class="shop-tab clearfix">
                                 <!-- Nav tabs -->
@@ -26,21 +41,6 @@
                                 @if($catalogues)
                                     {{ $catalogues->links() }}
                                 @endif
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
-                            <div class="filter-by">
-                                <h4>Short by: </h4>
-                                <form action="#">
-                                    <div class="select-filter">
-                                        <select>
-                                            <option value="10">popular</option>
-                                            <option value="20">premium</option>
-                                            <option value="30">standard</option>
-                                            <option value="30">gold</option>
-                                        </select>
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </div>

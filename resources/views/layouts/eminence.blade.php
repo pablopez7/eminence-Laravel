@@ -56,6 +56,7 @@
     <!-- modernizr JS
 ============================================ -->
     <script src="{{ url('js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
 </head>
 
 <body>
@@ -246,6 +247,7 @@
         </div>
     </footer>
     <!-- footer end -->
+
     <!-- jquery
 		============================================ -->
     <script type="text/javascript" src="{{ url('js/vendor/jquery-1.12.4.min.js') }}"></script>
@@ -280,6 +282,32 @@
     <!-- main JS
 ============================================ -->
     <script type="text/javascript" src="{{ url('js/main.js') }}"></script>
+
+
+
+
+
+
+
+    <!-- ****Show-Image**** Add jQuery library -->
+    <script type="text/javascript" src="{{ url('lib/show-image/jquery-1.7.1.min.js') }}"></script>
+
+    <!-- ****Show-Image**** Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="{{ url('lib/show-image/jquery.mousewheel-3.0.6.pack.js') }}"></script>
+
+    <!-- ****Show-Image**** Add fancyBox main JS and CSS files -->
+    <link rel="stylesheet" type="text/css" href="{{ url('lib/show-image/jquery.fancybox.css') }}" media="screen" />
+    <script type="text/javascript" src="{{ url('lib/show-image/jquery.fancybox.js') }}"></script>
+
+
+    <!-- ****Show-Image**** -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fancybox').fancybox();
+        });
+    </script>
+
+
 </body>
 
 </html>

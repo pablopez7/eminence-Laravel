@@ -43,3 +43,7 @@
 .space-title{
     margin: 12px 0 35px 0;
 }
+
+.tex-slide{
+    text-shadow: -2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff;
+}
