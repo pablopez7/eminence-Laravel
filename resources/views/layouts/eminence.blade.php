@@ -202,8 +202,8 @@
                     <div class="col-md-3 hidden-sm col-xs-12">
                         <div class="footer-widget payment">
                             <h5>redes sociales</h5>
-                            <p>Visita nuestras redes sociales y
-                                <br><strong>no olvides comprartir</strong></p>
+                            <p>Visita nuestra tienda y nuestras redes sociales.
+                                <br><strong>No olvides compartir.</strong></p>
                             <div class="newsletter-social-icon">
                                 <ul>
                                     <li class="google-plus"><a href="https://www.instagram.com/eminencemx/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
