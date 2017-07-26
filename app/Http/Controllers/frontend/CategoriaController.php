@@ -20,7 +20,7 @@ class CategoriaController extends Controller
         $categories = Category::where('status', 'active')
                                 ->where('catalogue_id', $catalogue->id)
                                 ->orderBy('id', 'desc')
-                                ->paginate(16);
+                                ->paginate(28);
 
         $catalogue_id = $catalogue->id;
         $catalogue_title = $catalogue->title;

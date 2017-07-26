@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-9 col-xs-12">
+                <div class="col-md-12 col-xs-12">
                     <div class="clearfix"></div>
                     <div class="tab-content">
                         <div id="grid" class="tab-pane active" role="tabpanel">
@@ -33,7 +33,7 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         @forelse($professionals as $professional)
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-md-3 col-md-3 col-sm-4 col-xs-12">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
                                                         <a href="#"><img
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-9 col-xs-12">
+                <div class="col-md-12 col-xs-12">
                     <div class="clearfix"></div>
                     <div class="tab-content">
                         <div id="grid" class="tab-pane active" role="tabpanel">
@@ -79,7 +79,7 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         @forelse($retails as $retail)
-                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <div class="col-md-3 col-md-3 col-sm-4 col-xs-12">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
                                                         <a href="#"><img

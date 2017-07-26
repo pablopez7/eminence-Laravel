@@ -70,8 +70,7 @@
                                                             </h4>
                                                             <ul class="cart-metalic">
                                                                 <li>
-                                                                    <a href="/catalogos/{{ $catalogue->id }}/categorias/"
-                                                                       class="add-to-cart">Ver >></a></li>
+                                                                    <a href="/catalogos/{{ $catalogue->id }}/categorias/" class="add-to-cart">Ver >></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -114,7 +113,8 @@
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7">
                                                         <div class="single-product-info">
-                                                            <h2>{{ $catalogue->title }}</h2>
+                                                            <h2 class="text-center">{{ $catalogue->title }}</h2>
+                                                            <hr>
                                                             <h5>{{ $catalogue->description }}</h5>
                                                             <ul class="cart-metalic">
                                                                 <li>

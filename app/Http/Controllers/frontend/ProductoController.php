@@ -23,7 +23,7 @@ class ProductoController extends Controller
         $products = Product::where('status', 'active')
                             ->where('category_id', $category->id)
                             ->orderBy('id', 'desc')
-                            ->paginate(12);
+                            ->paginate(21);
 
         $category_id = $category->id;
         $category_title = $category->title;

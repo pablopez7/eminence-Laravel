@@ -127,8 +127,7 @@
                                                     <div class="col-lg-4 col-md-5 col-sm-5">
                                                         <div class="single-product">
                                                             <div class="single-product-img">
-                                                                <a href="#"><img class="img-home" src="{{ url("images/products/$product->image") }}"
-                                                                                 alt="{{ $product->title }}"></a>
+                                                                <a href="#"><img class="img-home" src="{{ url("images/products/$product->image") }}" alt="{{ $product->title }}"></a>
                                                             </div>
                                                             <div class="single-product-hover">
                                                                 <div class="single-product-hover-text">
@@ -142,7 +141,8 @@
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7">
                                                         <div class="single-product-info">
-                                                            <h2>{{ $product->title }}</h2>
+                                                            <h2 class="text-center">{{ $product->title }}</h2>
+                                                            <hr>
                                                             <h5>{{ $product->description }}</h5>
                                                         </div>
                                                     </div>

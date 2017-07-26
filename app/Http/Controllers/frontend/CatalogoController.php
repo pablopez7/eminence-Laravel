@@ -30,7 +30,7 @@ class CatalogoController extends Controller
     public function catalogos(Category $category){
         $catalogues = Catalogue::where('status', 'active')
                                 ->orderBy('id', 'asc')
-                                ->paginate(4);
+                                ->paginate(8);
 
         $categories = Category::where('status', 'active')->get();
 

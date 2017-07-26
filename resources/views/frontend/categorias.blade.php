@@ -87,7 +87,7 @@
                                                     </div>
                                                     <div class="single-product-hover">
                                                         <div class="single-product-hover-text">
-                                                            <h4><a href="#">{{ $category->title }}</a></h4>
+                                                            <h4><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos">{{ $category->title }}</a></h4>
                                                             <ul class="cart-metalic">
                                                                 <li><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos" class="add-to-cart">Ver >></a></li>
                                                             </ul>
@@ -119,9 +119,9 @@
                                                             </div>
                                                             <div class="single-product-hover">
                                                                 <div class="single-product-hover-text">
-                                                                    <h4><a href="#">{{ $category->title }}</a></h4>
+                                                                    <h4><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos/">{{ $category->title }}</a></h4>
                                                                     <ul class="cart-metalic">
-                                                                        <li><a href="cart.html" class="add-to-cart">Ver >></a></li>
+                                                                        <li><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos/" class="add-to-cart">Ver >></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -129,7 +129,8 @@
                                                     </div>
                                                     <div class="col-lg-8 col-md-7 col-sm-7">
                                                         <div class="single-product-info">
-                                                            <h2>{{ $category->title }}</h2>
+                                                            <h2 class="text-center">{{ $category->title }}</h2>
+                                                            <hr>
                                                             <h5>{{ $category->description }}</h5>
                                                             <ul class="cart-metalic">
                                                                 <li><a href="/catalogos/{{ $catalogue_id }}/categorias/{{ $category->id }}/productos/" class="add-to-cart">Ver >></a></li>

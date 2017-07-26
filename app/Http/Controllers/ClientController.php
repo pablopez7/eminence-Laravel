@@ -49,7 +49,7 @@ class ClientController extends Controller
 
         $this->validate($request, [
             'title' => 'required|max:100|unique:clients',
-            'description' => 'required|max:1000',
+            'description' => 'max:1000',
             'status' => 'required|max:10',
             'kind' => 'required',
             'image' => 'required|image'
@@ -57,7 +57,6 @@ class ClientController extends Controller
             'title.required' => 'El título es requerido.',
             'title.unique' => 'El título que has introducido ya existe.',
             'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
-            'description.required' => 'La descripción es requerida.',
             'image.required' => 'Es necesario introducir una imagen.',
             'kind.required' => 'Es necesario saber el tipo de cliente.'
         ]);
@@ -97,7 +96,7 @@ class ClientController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:100|unique:clients,title,' . $client->id,
-            'description' => 'required|max:1000',
+            'description' => 'max:1000',
             'status' => 'required|max:10',
             'kind' => 'required',
             'image' => 'image'
@@ -105,7 +104,6 @@ class ClientController extends Controller
             'title.required' => 'El título es requerido.',
             'title.unique' => 'El título que has introducido ya existe.',
             'title.max' => 'El titulo solo acepta un máximo de 250 caracteres.',
-            'description.required' => 'La descripción es requerida.',
             'image.required' => 'Es necesario introducir una imagen.',
             'kind.required' => 'Es necesario saber el tipo de cliente.'
         ]);
