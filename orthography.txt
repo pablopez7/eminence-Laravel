@@ -1,0 +1,112 @@
+Categorías del catálogo:
+
+Catálogos
+
+No existen catálogos, crea uno.
+
+El título es requerido.
+El título que has introducido ya existe.
+El titulo solo acepta un máximo de 250 caracteres.
+La descripción es requerida.
+Es necesario introducir una imagen.
+
+Es necesario saber el tipo de cliente.
+
+
+Catalogo creado correctamente.
+
+Debe especificar al menos un valor diferente para actualizar.
+
+Catálogo editado correctamente.
+
+Catálogo eliminado correctamente.
+
+Categoría creada correctamente.
+
+Categoría editada correctamente.
+
+
+La categoría que tratas de editar no corresponde a este catálogo.
+
+Agregar Imagen.
+
+Estatus
+Acciones
+
+Titulo
+Descripción
+No existen categorías, crea una
+
+Catálogo.
+Regresar.
+Editar Imagen.
+Eliminar.
+Editar.
+Cancelar.
+Nota: El titulo no se debe repetir con otros productos, pero se puede repetir así mismo.
+
+Cambia la imagen aquí
+
+Editar Cliente.
+
+Aun no hay clientes, crea uno
+
+Tipo.
+
+Productos.
+
+No existen productos, crea uno.
+
+
+Título del producto
+
+
+La página donde deseas acceder no existe.
+
+inicio.
+
+No existen catálogos, los estamos creando...
+
+No existen categorías, las estamos creando
+
+Nosotros te contactamos
+Teléfono
+Asunto
+Mensaje
+
+Visita nuestra tienda y nuestras redes sociales
+No olvides compartir.
+
+Contáctanos
+
+Empresa Verde
+Estamos comprometidos con la búsqueda de soluciones orgánicas, tierra-amistosos en todos los aspectos de nuestro
+    negocio. Estas son algunas de las maneras que estamos haciendo eso
+
+Nuestros Productos
+
+Cada producto es elaborado y empacado con la mejor calidad y frescura cada ingrediente es seleccionado cuidadosamente.
+
+Cada cliente es tan importante para nosotros, por eso cada producto es elaborado con la más alta calidad.
+
+Somos una empresa Socialmente responsable, y solo procuramos que cada cliente reciba un producto de la más alta calidad.
+
+
+Puedes ver más detalles de cada producto en nuestra página en ingles
+
+
+Por el momento no tenemos productos, pero muy pronto estarán listos...
+
+
+Seleccionamos cuidadosamente cada producto para tu tranquilidad
+
+reconocimientos
+Productos naturales
+Nuestros reconocimientos nos avalan como una empresa 100% natural
+Tenemos un grupo de profesionales listos para asesorarte
+atención personalizada
+
+No existen productos, los estamos creando...
+
+
+Ver Todas las Categorías
