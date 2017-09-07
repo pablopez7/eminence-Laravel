@@ -79,10 +79,10 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         @forelse($categories as $category)
-                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
                                                 <div class="single-product">
                                                     <div class="single-product-img">
-                                                        <a href="#"><img class="img-category" src="{{ url("images/categories/$category->image") }}"
+                                                        <a href="#"><img class="img-home" src="{{ url("images/categories/$category->image") }}"
                                                                          alt="{{ $category->title }}"></a>
                                                     </div>
                                                     <div class="single-product-hover">

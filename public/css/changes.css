@@ -13,8 +13,6 @@
 
 
 .img-category{
-    width: 100%;
-    max-height: 280px;
     border: inset #d7ffd5;
 }
 
@@ -46,4 +44,8 @@
 
 .tex-slide{
     text-shadow: -2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff;
+}
+
+.title-home{
+    font-size: 20px;
 }
