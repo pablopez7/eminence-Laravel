@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'mail.siim.biz'),
+    'host' => env('MAIL_HOST', 'mail.eminence.mx'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'prueba@siim.biz'),
-        'name' => env('MAIL_FROM_NAME', 'Pablo López'),
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto@eminence.mx'),
+        'name' => env('MAIL_FROM_NAME', 'Eminence México'),
     ],
 
     /*

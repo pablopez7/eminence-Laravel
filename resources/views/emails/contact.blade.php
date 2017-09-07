@@ -24,13 +24,13 @@
                     <h2>{{ $nombre }}</h2>
                     <h4>Te ha enviado un correo a través de la plataforma de www.eminence.mx</h4>
 
-                    <h3>Asunto:</h3>
-                    <h4>{{ $asunto }}</h4>
+                    <h4>Asunto:</h4>
+                    <h3>{{ $asunto }}</h3>
 
-                    <h2>Mensaje:</h2>
-                    <h4>{{ $mensaje }}</h4>
+                    <h4>Mensaje:</h4>
+                    <h3>{{ $mensaje }}</h3>
 
-                    <h3>Sus datos de contacto son los siguientes:</h3>
+                    <h3>Los datos de contacto que dejo el usuario son los siguientes:</h3>
                     <div class="col-sm-6 col-md-6">
                         <h4>Teléfono:</h4>
                         <h2>{{ $telefono }}</h2>

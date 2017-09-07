@@ -45,7 +45,7 @@ class ContactoController extends Controller
     {
         Mail::send('emails.contact', $request->all(), function ($msj){
             $msj->subject('Contacto desde www.eminence.mx');
-            $msj->to('pablo@smartsystem.mx', 'pablopez7@gmail.com');
+            $msj->to('claudia@eminence.mx');
         });
 
         return Redirect::back()->with('message', 'La información ha sido enviada exitosamente al correo: contacto@eminence.mx, nos pondremos en contacto contigo lo antes posible.');
