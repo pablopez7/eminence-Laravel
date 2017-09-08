@@ -53,6 +53,9 @@
     <!-- personal changes CSS
 ============================================ -->
     <link rel="stylesheet" href="{{ url('css/changes.css') }}">
+    {{-- mapper css --}}
+    <link rel="stylesheet" href="{{ url('css/mapper.css') }}">
+    {{-- mapper css --}}
     <!-- modernizr JS
 ============================================ -->
     <script src="{{ url('js/vendor/modernizr-2.8.3.min.js') }}"></script>

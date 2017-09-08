@@ -9,11 +9,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
-Route::get('/', function () {
-    return view('frontend.home');
-});
+ */
 
 Auth::routes();
 
@@ -27,15 +23,17 @@ Route::get('/clientes', 'frontend\ClienteController@index')->name('clientes');
 
 Route::get('/catalogos/{catalogue}/categorias/{category}/productos', 'frontend\ProductoController@index')->name('productos');
 
+//Ruta para acceder a frontend.home, con mapa de spas.
 Route::resource('/', "frontend\CatalogoController");
+//Ruta para acceder a frontend.home, con mapa de spas.
+
 Route::resource('layouts/eminence', "frontend\CatalogoController");
 Route::resource('frontend/catalogos', "frontend\CatalogoController");
 
 Route::resource('contacto', "frontend\ContactoController");
 
-
 //Rutas Administracion
-Route::group(['middleware' => 'auth'], function (){
+Route::group(['middleware' => 'auth'], function () {
     Route::resource('catalogues', "CatalogueController");
     Route::resource('catalogues.categories', "CategoryController");
     Route::resource('categories', "CategoryController");
@@ -43,4 +41,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::resource('categories.products', "ProductController");
     Route::resource('products', "ProductController");
     Route::resource('clients', "ClientController");
+
+    //Rutas para CRUD de entidad Spa, parte administrativa.
+    Route::resource('spa', "SpaController");
 });
