@@ -21,6 +21,8 @@ Route::get('/catalogos/{catalogue}/categorias', 'frontend\CategoriaController@in
 Route::get('/empresaVerde', 'frontend\CategoriaController@empresaVerde')->name('empresaVerde');
 Route::get('/clientes', 'frontend\ClienteController@index')->name('clientes');
 
+Route::get('/SpaLocator', 'frontend\SpaController@index')->name('SpaLocator');
+
 Route::get('/catalogos/{catalogue}/categorias/{category}/productos', 'frontend\ProductoController@index')->name('productos');
 
 //Ruta para acceder a frontend.home, con mapa de spas.

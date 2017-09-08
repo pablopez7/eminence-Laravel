@@ -210,18 +210,4 @@
         </div>
     </div>
 </div>
-<section id="map">
-    <div class="container">
-        <div class="row" style="margin-top: 20px;">
-            <div class="col-sm-12">
-                <div class="panel panel-success text-center">
-                    <div class="panel-heading"><div class="panel-title"><b>Mapa de Spas</b></div></div>
-                    <div class="panel-body">
-                        <div style="width: 900px; height: 600px;">{!! Mapper::render() !!}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 @endsection

@@ -73,12 +73,17 @@
         <div class="main-header-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 col-md-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-5 col-md-4 col-sm-5 col-xs-5">
                         <div class="logo">
                             <a href="{{ url('/') }}"><img src="{{ url('img/logo/milogo.png') }}" alt="eminence"></a>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-8 col-sm-6 col-xs-6">
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                        <div class="logo">
+                            <a href="/SpaLocator"><i class="zmdi zmdi-pin animated infinite wobble zmdi-hc-fw mdc-text-green zmdi-hc-3x"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-sm-5 col-xs-5">
                         <div class="mainmenu-area">
                             <div class="mainmenu">
                                 <nav>
@@ -100,10 +105,9 @@
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                                 <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
-                                                <li><a href="https://www.latiendadesuperfoods.com" target="_blank">Tienda</a></li>
+                                                <li><a href="/SpaLocator">SPA Locator</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="https://www.latiendadesuperfoods.com" target="_blank">Tienda</a></li>
                                         <li><a href="/contacto">Contacto</a></li>
                                     </ul>
                                 </nav>
@@ -139,8 +143,10 @@
                                             <li role="separator" class="divider"></li>
                                             <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                             <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
+                                            <li><a href="/SpaLocator">SPA Locator</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="/SpaLocator">Spa Locator</a></li>
                                     <li><a href="/contacto">Contacto</a></li>
                                 </ul>
                             </nav>
@@ -197,7 +203,7 @@
                                 <li><a href="/empresaVerde">Empresa Verde</a></li>
                                 <li><a href="https://eminenceorganics.com/us" target="_blank">Éminence EUA</a></li>
                                 <li><a href="https://eminenceorganics.com/us/awards" target="_blank">Awards</a></li>
-                                <li><a href="https://www.latiendadesuperfoods.com" target="_blank">Tienda</a></li>
+                                <li><a href="/SpaLocator">SPA Locator</a></li>
                                 <li><a href="/contacto">Contacto</a></li>
                             </ul>
                         </div>
@@ -211,7 +217,7 @@
                                 <ul>
                                     <li class="google-plus"><a href="https://www.instagram.com/eminencemx/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
                                     <li><a href="https://www.facebook.com/MexicoEminence" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
-                                    <li class="pinterest"><a href="https://www.latiendadesuperfoods.com" target="_blank"><i class="zmdi zmdi-mall"></i></a></li>
+                                    <li class="twitter"><a href="/SpaLocator"><i class="zmdi zmdi-pin"></i></a></li>
                                     <li class="google-plus"></li>
                                 </ul>
                             </div>
